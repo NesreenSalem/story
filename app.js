@@ -32,7 +32,7 @@ const  jsonData=JSON.stringify(data);
 const url ="https://us20.api.mailchimp.com/3.0/lists/ecfeccc237";
 const options ={
   method: "POST",
-  auth : "adam:def3528ba4f73166f1f56a4cfe574ec4-us21",
+  auth : "adam:def3528ba4f73166f1f56a4cfe574ec4-us20",
 
 }
 const requeste = https.request(url,options,function(response){
@@ -51,11 +51,11 @@ requeste.end();
 });
 
 
-app.post("/failure",function(req,res){
+app.post("/failure",function( req,res){
   res.redirect("/");
 });
 
-app.listen(process.env.PORT || 3000,function(){
+app.listen(process.env.PORT || 3000  ,function(){
   console.log("Server has started at port 3000");
 });
 
